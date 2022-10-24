@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home page AirBnb gilad and guy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+
+    <script src="js/UserHomePage.js"></script>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/UserHomePage.css" rel="stylesheet" />
+
+    <script src="js/airBNB.js"></script>
+    <script src="js/UserHomePage.js"></script>
+
+
+</head>
+
+
+
+<body onload="OnLoadUserPage()">
+
+
+    <!--the header of our pages-->
+    <div class="container-fluid logo-header">
+        <div class="row">
+            <div id="header" class="col-12">
+                <img src="img/new.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="topnav col-12">
+                <a class="active" href="UserHomePage.html">Home</a>
+                <a href="MyWishList.html">My wish list</a>
+                <a href="MyRents.html">My Rents</a>
+                <a href="EnterPage.html">Log out</a>
+
+                <p id="userVac"></p>
+                <p id="fullName"></p>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!--the header of our pages-->
+
+    <!--  Quote Request Start -->
+    <div class="container-fluid bg-secondary my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 py-5 py-lg-0">
+                    <h6 class="text-primary text-uppercase font-weight-bold">Amsterdam Apartments</h6>
+                    <h1 class="mb-4">We have in this site:</h1>
+                    <p class="mb-4">
+                        We are pleased to introduce you our new search engine
+                        <br />Here you can enjoy an abundance of apartments at attractive prices
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-4 ">
+                            <h1 class="text-primary mb-2 counters" data-toggle="counter-up"></h1>
+                            <h6 class="font-weight-bold mb-4">Apartments in Amsterdam</h6>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1 class="text-primary mb-2 counters " data-toggle="counter-up"></h1>
+                            <h6 class="font-weight-bold mb-4">Average rating<span class="fa fa-star checked"></span></h6>
+
+
+                        </div>
+                        <div class="col-sm-4">
+                            <h1 class="text-primary mb-2 counters " data-toggle="counter-up"></h1>
+                            <h6 class="font-weight-bold mb-4">Our prices start at</h6>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div id="search-form" class="bg-primary py-5 px-4 px-sm-5">
+                        <form class="py-5">
+
+                            <div class="form-group">
+                                <input id="minPrice" onchange="updateMinInput(this.value)" type="number" class="form-control border-0 p-4" placeholder="minimum price" />
+                            </div>
+
+                            <div class="form-group">
+                                <input id="maxPrice" onchange="updateMaxInput(this.value)" type="number" class="form-control border-0 p-4" placeholder="maximum price" />
+                            </div>
+
+                            <div class="form-group">
+                                <input onchange="onChangeDate()" id="start-date" type="date" class="form-control border-0 p-4" placeholder="2022-04-04" required/>
+                            </div>
+                            <div class="form-group">
+                                <input onchange="onChangeDate()" id="end-date" type="date" class="form-control border-0 p-4" placeholder="end date" required />
+                            </div>
+                            <div class="form-group">
+                                <label id="label_range" for="rate_range">rating above: 0</label>
+                                <input id="Range_input" type="range" min='0' max='5' value='0' step='0.5' onchange="onChangeRating()" class="form-control border-0 p-0" name="rate_range" />
+                            </div>
+                            <div class="form-group">
+                                <select id="select-input" class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected value="-1">Select rooms</option>
+
+                                    <!--here will be rooms option-->
+
+                                </select>
+                            </div>
+                            <div>
+                                <button id="search-btn" onclick="RenderApartments()" class="btn btn-dark btn-block border-0 py-3" type="button">Find apartments</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote Request Start -->
+    <!--the load bar when you click search btn-->
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+
+    <!--here we will render the apartments info after search-->
+    <section id="ph-apartments" class="container-fluid">
+
+
+
+
+        <!--start dynamic-->
+        <!--<div class="apartBox row">
+            <div class="apartIMG col-md-4 col-xl-3">
+                <img src="https://a0.muscache.com/pictures/10272854/8dcca016_original.jpg" alt="Alternate Text" /><br /><br />
+                <h3>Price for night: 350$</h3>
+            </div>
+            <div class="col-md-8 col-xl-9">
+                <h1>Quiet Garden View Room & Super Fast WiFi</h1>
+                <p>
+                    17th century Dutch townhouse in the heart of the city. no public transport needed! Located a stones throw from Rembrandt Square,
+                    Dam Square, Leidse Square and Flower Market. Walking distance from Central Station.<br />Comfortable, cosy, lockable studio with
+                    comfortable bed and with private bathroom, double glazed windows and night blackout curtains, flat screen TV and mini fridge, Wi-Fi.
+                    No bathtub only shower. No kitchen. No curfew. You feel 100% privacy. Maximum for 2 persons!<br /><br /><b>The space</b><br />For those who like all facets of city life. In the streets surrounding the house, there are lots of antique shops, and for those who are into browsing for antiques. The Rijksmuseum is a short walk away. The famous nine-streets with all its little boutique shops, cafes, restaurants and whatnot is also around the corner. The Dam Square, Leidse Square and Rembrandt Squarejust minutes to walk.
+                    <br />No Curfew and you feel 100% privacy. <br />Hair dryer, towels and linens are included
+                </p>
+                <div class="row">
+                    <div class="apartBtn col-4">
+                        <button onclick="window.open('https://www.airbnb.com/rooms/2818')">My website</button>
+                    </div>
+                    <div class="apartBtn col-4">
+                        <button>Rent Now</button>
+                    </div>
+                    <div class="apartBtn col-4">
+                        <button>Add to Wish List</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <hr />-->
+        <!--stop dynamic-->
+
+
+    </section>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span onclick=" closeModal()" class="close">&times;</span>
+            <!--payment form-->
+            <h2 id="checkoutH2"></h2>
+            <p id="warning">This form isnt Real Form the Details isnt save at all and you dont have to insert any value just click on the button (You will not charge about anything)</p>
+            <div class="row">
+                <div class="col-75">
+                    <div class="container containerl">
+                        <form>
+
+                            <div class="row rowl">
+                                <div class="col-50">
+                                    <h3>Billing Address</h3>
+                                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                    <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                                    <input type="text" id="city" name="city" placeholder="New York">
+
+                                    <div class="row rowl">
+                                        <div class="col-50">
+                                            <label for="state">State</label>
+                                            <input type="text" id="state" name="state" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="zip">Zip</label>
+                                            <input type="text" id="zip" name="zip" placeholder="10001">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;background-color: white;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;background-color: white;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;background-color: white;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;background-color: white;"></i>
+                                    </div>
+                                    <label for="cname">Name on Card</label>
+                                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                    <label for="ccnum">Credit card number</label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                    <div class="row rowl">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <label>
+                                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                            </label>
+                            <input onclick="AddtoUpComingRents()" id="checkoutBTN" type="button" value="Continue to checkout" class="btn input_btn">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div id="CalDiv" class="container containerl">
+                        <!--Here will be the paycheck dynamic-->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

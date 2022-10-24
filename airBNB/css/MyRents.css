@@ -1,0 +1,59 @@
+﻿#header3 img {
+    margin: auto;
+    display: block;
+}
+
+
+
+body {
+    background-image: linear-gradient(to left, #ffffff, #febbbc);
+}
+
+.topnav {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #ff5a5f, #febbbc);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+    .topnav a, .topnav p {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: Assistant,Aharoni;
+    }
+
+    .topnav p {
+        float: right;
+        color: #d53131;
+       
+    }
+
+    .topnav a:hover {
+        background-color: #f9757599;
+        color: black;
+    }
+
+    .topnav a.active {
+        color: white;
+    }
+
+label {
+    margin-bottom: 0px;
+    color: black;
+    font-size: 22px;
+}
+
+
+/*i think this datalist thead header CSS*/
+
+
+
+.card button {
+   
+    background-image: linear-gradient(to top right, #dc1c1f, #ff1a22);
+   
+}
+
