@@ -18,77 +18,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- jquery -->
-    <script> src="https://code.jquery.com/jquery-3.4.1.min.js"</script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.slim.js"
+    integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+    crossorigin="anonymous"></script>
 <!-- js file -->
-    <script src="web.js"></script>
+    <script src="web.js" defer></script>
 
-
-
-    <!-- transfare to a css file -->
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Exo:700");
-        header{
-            position:static;
-            top: 0%;
-            background-color: rgba(0,0,0,0.95);
-        }
-      body {
-        background-image:url('img/bg\ img.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-  background-size: cover;
-      }
-      * {
-        text-align: center;
-        margin: auto;
-        color:white
-      }
-      .profile {
-        border-radius: 50%;
-        width: 10vw;
-        aspect-ratio: 1/1;
-      }
-      img{
-        width: 20vw;
-        aspect-ratio: 4/3;
-      }
-      table {
-        width: 100%;
-      }
-
-      .fa {
-        font-size: 5vh;
-        color: #4e7ee9;
-      }
-      .available {
-        color: green;
-      }
-      footer {
-        position:sticky;
-        bottom: 0px;
-        background-color: blue;
-      }
-      li{
-        display: inline;
-        margin: 10px;
-        font-weight:500;
-      }
-      ul{
-        margin-top: -3vw;
-        padding: 0;
-      }
-
-h2 {
-  background: -webkit-linear-gradient(#000, #555);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline solid #333;
-}
-#more {display: none;}
-
-    </style>
-
-  </head>
+<link rel="stylesheet" href="myWeb.css">  
+</head>
 
   <body>
 
@@ -141,10 +79,10 @@ h2 {
       be relied upon to help your company achieve its goals.
     </p>
     
-    <p>
+    <span>
       I’m a 4th year student in industrial engineering specialises in
       information systems
-    </p>
+    </span>
 
 <br></div>
 <h2 id="experience">Work experience</h2><br>
@@ -188,39 +126,63 @@ h2 {
 <div class="col">
     <a target="_blank" href="pig game/index.html"><img src="img/pig game.jpeg" alt="pig game"></a>
     <p>pig game</p>
+
+<button id="0" onclick="instructions(id)">Press for instructions</button>
+
+<!-- The Modal -->
+<div id="instructions0" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Instructions: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+  If the player rolls a 1, they score nothing and it becomes the next player's turn.
+  If the player rolls any other number, it is added to their turn total and the player's turn continues.
+  If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+  The first player to score 100 or more points wins.
+</p>
+  </div>
+</div>
 </div>
 <div class="col">
 <a target="_blank" href="airBNB/EnterPage.html"><img src="img/Airbnb.jpg" alt="airBNB website"></a>
 <p>air bnb</p>
+<div class="col">
+  <button id='1' onclick="instructions(id)">Press for instructions</button>
+
+<div id="instructions1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+<p>This is a project I did for a school project. It's a website for airBNB with a specific apartments from a json file</p>
+    </div>
+  
+  </div>
 </div>
+</div>
+
+
 <div class="col">
 <a target="_blank" href="guess my number/index.html"><img src="img/guess my number.jpeg" alt="guess my number"></a>
 <p>guess my number</p>
+<button id='2' onclick="instructions(id)">Press for instructions</button>
+  <div id="instructions2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Instructions: You will need to guess a random number between 1 and 20, you have 20 guesses, each wrong guess you lose a point</p>
+    </div>
+  
+  </div>
+
+</div>
 </div>
 <div class="row">
-<div class="col">
+  <audio id="sound" controls>
+    <source src="bg song.mp3" type="audio/mpeg">
+</div>
 
-    <button onclick="showMore()" id="instructionsBtn">Press for instructions</button>
-<p id="instructions">Instructions: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
-    If the player rolls a 1, they score nothing and it becomes the next player's turn.
-    If the player rolls any other number, it is added to their turn total and the player's turn continues.
-    If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
-    The first player to score 100 or more points wins.
-</p>
-</div>
-<div class="col">
-<p>This is a project I did for a school project. It's a website for airBNB with a specific apartments from a json file</p>
-</div>
-<div class="col">
-  <p>Instructions: You will need to guess a random number between 1 and 20, you have 20 guesses, each wrong guess you lose a point</p>
-</div>
-</div> 
-    </div>
 
-    <audio controls>
-        <source src="bg song.mp3" type="audio/mpeg">
-      </audio>
-</div>
 <footer class="copyright-text">
       <b>Copyright ©Guy Ishakov</b>
       

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:700");
+header {
+  position: static;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-image: linear-gradient(to right, red, yellow);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-weight: 6000px;
+}
+.modal-content p {
+  color: #000;
+  font-weight: 400;
+  font-size: initial;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  background-image: url("img/bg\ img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+* {
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-weight: 500;
+}
+.profile {
+  border-radius: 50%;
+  width: 10vw;
+  aspect-ratio: 1/1;
+}
+img {
+  width: 20vw;
+  aspect-ratio: 4/3;
+}
+table {
+  width: 100%;
+}
+span {
+  color: yellow;
+  font-weight: 700;
+}
+.fa {
+  font-size: 5vh;
+  color: #4e7ee9;
+}
+.available {
+  color: green;
+}
+footer {
+  position: sticky;
+  bottom: 0px;
+  background-color: blue;
+}
+li {
+  display: inline;
+  margin: 10px;
+  font-weight: 500;
+}
+ul {
+  margin-top: -3vw;
+  padding: 0;
+}
+
+h2 {
+  background: -webkit-linear-gradient(#000, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline solid #333;
+}
+#more {
+  display: none;
+}
+button {
+  background-color: #e04040;
+  border-radius: 11px;
+}
+button:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+#sound {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
