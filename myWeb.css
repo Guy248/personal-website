@@ -1,8 +1,114 @@
 @import url("https://fonts.googleapis.com/css?family=Exo:700");
+
+* {
+  text-align: center;
+  margin: auto;
+  color: black;
+  font-family: sans-serif;
+}
+body {
+  background-color: #e4f9f5;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
 header {
-  position: static;
-  top: 0%;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: #395b64;
+}
+header .profile {
+  border-radius: 30px;
+  width: 10vw;
+  min-width: 100px;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: 10px;
+}
+#name {
+  font-size: x-large;
+}
+.available {
+  color: green;
+}
+h3 {
+  font-family: "Sacramento", cursive;
+  font-weight: 800;
+}
+.fa {
+  font-size: 35px;
+  color: #4e7ee9;
+}
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 5px;
+  width: 5%;
+  border-color: gray;
+}
+ul {
+  padding: 0;
+}
+li {
+  display: inline;
+  margin: 10px;
+  font-weight: 500;
+}
+a:hover {
+  color: #0007ff;
+}
+
+h2 {
+  background: -webkit-linear-gradient(top left, #000, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline solid #333;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+.cloud {
+  display: inline;
+  position: relative;
+}
+.left {
+  right: 30vw;
+  bottom: 3vh;
+}
+.right {
+  left: 30vw;
+  top: 10vh;
+}
+
+.img-fluid {
+  width: 20vw;
+  aspect-ratio: 4/3;
+  min-width: 175px;
+}
+button {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  margin: 1rem;
+  background-color: #fd841f;
+  color: white;
+  border: none;
+  border-radius: 11px;
+  overflow: hidden;
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
+}
+button::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+button:hover::before {
+  height: 600%;
 }
 .modal {
   display: none; /* Hidden by default */
@@ -16,10 +122,9 @@ header {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .modal-content {
-  background-image: linear-gradient(to right, red, yellow);
+  background-image: linear-gradient(to top left, #fdeedc, #f1a661);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -31,7 +136,6 @@ header {
   font-weight: 400;
   font-size: initial;
 }
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -39,83 +143,54 @@ header {
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-body {
-  background-image: url("img/bg\ img.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-* {
-  text-align: center;
-  margin: auto;
-  color: white;
-  font-weight: 500;
-}
-.profile {
-  border-radius: 50%;
-  width: 10vw;
-  aspect-ratio: 1/1;
-}
-img {
-  width: 20vw;
-  aspect-ratio: 4/3;
+
+span {
+  color: #fd841f;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }
 table {
   width: 100%;
 }
-span {
-  color: yellow;
-  font-weight: 700;
+th {
+  color: #333;
 }
-.fa {
-  font-size: 5vh;
-  color: #4e7ee9;
-}
-.available {
-  color: green;
-}
-footer {
-  position: sticky;
-  bottom: 0px;
-  background-color: blue;
-}
-li {
-  display: inline;
-  margin: 10px;
-  font-weight: 500;
-}
-ul {
-  margin-top: -3vw;
-  padding: 0;
+input[type="text"],
+input[type="email"],
+textarea {
+  position: flex;
+  background-color: inherit;
+  opacity: 0.5;
+  border: grey solid 3px;
+  width: 100%;
+  margin: 5px;
 }
 
-h2 {
-  background: -webkit-linear-gradient(#000, #555);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline solid #333;
-}
-#more {
-  display: none;
-}
-button {
-  background-color: #e04040;
-  border-radius: 11px;
-}
-button:hover {
-  cursor: pointer;
-}
-.hidden {
-  display: none;
-}
 #sound {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  bottom: 0px;
+  background-color: blue;
+  z-index: 5;
+}
+td > img {
+  width: 5em;
+  aspect-ratio: 1/1;
+  display: block;
+  padding: 2px;
+}
+p {
+  margin-bottom: 0;
 }

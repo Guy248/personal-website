@@ -1,4 +1,6 @@
 "use strict";
+
+//open a specific modal based on index
 function instructions(index) {
   // Get the modal
   let modal = document.getElementById("instructions" + index);

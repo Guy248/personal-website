@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guy Ishakov Website</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
     <!-- bootstrap -->
     <link
       rel="stylesheet"
@@ -12,6 +13,11 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <!--fonts-->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+    rel="stylesheet"
+  />
     <!-- icons -->
     <link
       rel="stylesheet"
@@ -36,7 +42,7 @@
           <img class="profile" src="img/me.jpeg" alt="Picture of me" />
         </div>
         <div class="col-4">
-          <h3>Guy Ishakov</h3>
+          <b id="name">Guy Ishakov</b><br>
           <b class="available">Available for work</b>
         </div>
         <div class="col-4">
@@ -54,14 +60,16 @@
           ></a>
         </div>
       </div>
-      <hr />
+      <hr>
         <nav>
             <div class="row">
                   <ul>
-                    <li><a data-row-id="sec-1" href="#objectives">Career objectives</a></li>
-                    <li><a data-row-id="sec-2" href="#experience">Work experience</a></li>
-                    <li><a data-row-id="sec-3" href="#skills">Skills</a></li>
-                    <li><a data-row-id="sec-4" href="#projects">My Projects</a></li>
+                    <li><a data-row-id="sec-1" href="#projects">My Projects</a></li>
+                    <li><a data-row-id="sec-2" href="#objectives">Career objectives</a></li>
+                    <li><a data-row-id="sec-3" href="#experience">Work experience</a></li>
+                    <li><a data-row-id="sec-4" href="#skills">Skills</a></li>
+                    <li><a data-row-id="sec-4" href="#contact">Contact me</a></li>
+                    
                   </ul>
             </div>
          </nav>
@@ -69,8 +77,64 @@
     </header>
 
 <div class="container">
+<br>
+<img class="cloud right" src="img/cloud.png" alt="">
+  <h2 id="projects">My projects</h2><br>
+  <img class="cloud left" src="img/cloud.png" alt="">
+  <div class="row">
+  <div class="col">
+      <a target="_blank" href="pig game/index.html"><img src="img/pig game.jpeg" alt="pig game" class="img-fluid"></a>
+      <p>pig game</p>
+  
+  <button id="0" onclick="instructions(id)">Press for instructions</button>
+  
+  <!-- The Modal -->
+  <div id="instructions0" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Instructions: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+    If the player rolls a 1, they score nothing and it becomes the next player's turn.
+    If the player rolls any other number, it is added to their turn total and the player's turn continues.
+    If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+    The first player to score 100 or more points wins.
+  </p>
+    </div>
+  </div>
+  </div>
+  <div class="col">
+  <a target="_blank" href="airBNB/EnterPage.html"><img src="img/Airbnb.jpg" alt="airBNB website" class="img-fluid"></a>
+  <p>air bnb</p>
+    <button id='1' onclick="instructions(id)">Press for instructions</button>
+  
+  <div id="instructions1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+  <p>This is a project I did for a school project. It's a website for airBNB with a specific apartments from a json file</p>
+      </div>
+    
+    </div>
+  </div>
+  <div class="col">
+  <a target="_blank" href="guess my number/index.html"><img src="img/guess my number.jpeg" alt="guess my number" class="img-fluid"></a>
+  <p>guess my number</p>
+  <button id='2' onclick="instructions(id)">Press for instructions</button>
+    <div id="instructions2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Instructions: You will need to guess a random number between 1 and 20, you have 20 guesses, each wrong guess you lose a point</p>
+      </div>
+    
+    </div>
+  
+  </div>
+  </div><hr>
 
-    <br><h2 id="objectives">Career objectives</h2><br>
+    <br><h2 id="objectives">Career objectives</h2>  <img 
+
     <div>
     <p>
       Responsible student with good judgment, time management, and a flexible
@@ -84,8 +148,11 @@
       information systems
     </span>
 
-<br></div>
-<h2 id="experience">Work experience</h2><br>
+<hr></div>
+
+<h2 id="experience">Work experience</h2>
+<img class="cloud left" src="img/cloud.png" alt="">
+
     <div>
     <table>
       <thead>
@@ -106,83 +173,64 @@
         <td>August 2016-March 2022</td>
       </tr>
     </table>
-    </div><br><br>
-<h2 id="skills">Skills</h2><br>
-    <div>
-    <table>
-      <td>JavaScript</td>
-      <td>HTML</td>
-      <td>CSS</td>
-      <td>SQL</td>
-      <td>C#</td>
-      <td>C++</td>
-      <td>Excel</td>
-      <td>Word</td>
-    </table>
-    </div><br><br>
+    </div><br><hr>
+    <img class="cloud right" src="img/cloud.png" alt="">
 
-    <h2 id="projects">My Projects</h2><br>
-    <div class="row">
-<div class="col">
-    <a target="_blank" href="pig game/index.html"><img src="img/pig game.jpeg" alt="pig game"></a>
-    <p>pig game</p>
+<h2 id="skills">Skills</h2>  
+<img class="cloud left" src="img/cloud.png" alt="">
 
-<button id="0" onclick="instructions(id)">Press for instructions</button>
+<div>
+  <br>
+  <table>
+    <tr>
+      <td><img src="img/html.png" alt="HTML5"></td>
+      <td><img src="img/css.png" alt="css 3"></td>
+      <td><img src="img/js.png"alt="JavaScript"></img></td>
+      <td><img src="img/bootstrap.png"alt="bootstrap"></img></td>
+      <td><img src="img/jquery.png"alt="jquery"></img></td>
+    </tr>
+    <tr>
+      <td><img src="img/sql.png" alt="SQL"></img></td>
+      <td><img src="img/json.png" alt="JSON"></img></td>
+      <td><img src="img/CS.png" alt="c#"></img></td>
+      <td><img src="img/C++.png" alt="C++"></img></td>
+                
+      <td><img src="img/xls..png" alt="xls"></img></td>
+    </tr>
+  </table>
+</div>
+<br><hr>
 
-<!-- The Modal -->
-<div id="instructions0" class="modal">
+    
+<h2 id="contact">Contact me</h2>  <img class="cloud left" src="img/cloud.png" alt="">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Instructions: Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
-  If the player rolls a 1, they score nothing and it becomes the next player's turn.
-  If the player rolls any other number, it is added to their turn total and the player's turn continues.
-  If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
-  The first player to score 100 or more points wins.
-</p>
-  </div>
+<form
+target="_blank"
+action="mailto:ishakov.guy@gmail.com"
+method="post"
+enctype="text/plain"
+>
+
+<div class="row">
+  <div class="col-12 col-lg-6">
+      <input type="text" name="yourName" placeholder="Enter your name" /><br />
+</div>
+<div class="col-12 col-lg-6">
+      <input type="email" name="yourEmail" placeholder="Enter your email" /><br />
+</div>
+<div  class="col-12">
+      <textarea name="yourMessage" rows="6" placeholder="Your message..."></textarea><br />
 </div>
 </div>
-<div class="col">
-<a target="_blank" href="airBNB/EnterPage.html"><img src="img/Airbnb.jpg" alt="airBNB website"></a>
-<p>air bnb</p>
-<div class="col">
-  <button id='1' onclick="instructions(id)">Press for instructions</button>
+<button type="submit" value="submit">submit</button>
 
-<div id="instructions1" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-<p>This is a project I did for a school project. It's a website for airBNB with a specific apartments from a json file</p>
-    </div>
-  
-  </div>
-</div>
-</div>
-
-
-<div class="col">
-<a target="_blank" href="guess my number/index.html"><img src="img/guess my number.jpeg" alt="guess my number"></a>
-<p>guess my number</p>
-<button id='2' onclick="instructions(id)">Press for instructions</button>
-  <div id="instructions2" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Instructions: You will need to guess a random number between 1 and 20, you have 20 guesses, each wrong guess you lose a point</p>
-    </div>
-  
-  </div>
-
-</div>
-</div>
+</form>
+<!-- sound -->
 <div class="row">
   <audio id="sound" controls>
     <source src="bg song.mp3" type="audio/mpeg">
 </div>
-
-
+</div>
 <footer class="copyright-text">
       <b>Copyright ©Guy Ishakov</b>
       
