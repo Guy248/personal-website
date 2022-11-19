@@ -24,17 +24,26 @@ header .profile {
   top: 10px;
 }
 #name {
-  font-size: x-large;
+  font-size: 40px;
 }
 .available {
-  color: green;
+  color: #16c60c;
+}
+#greenEmoji {
+  font-size: xx-small;
+  vertical-align: 15%;
+}
+.contact {
+  position: relative;
+  top: 10px;
 }
 h3 {
   font-family: "Sacramento", cursive;
   font-weight: 800;
+  font-size: 50px;
 }
 .fa {
-  font-size: 35px;
+  font-size: 65px;
   color: #4e7ee9;
 }
 hr {
@@ -51,6 +60,7 @@ li {
   display: inline;
   margin: 10px;
   font-weight: 500;
+  text-decoration: underline;
 }
 a:hover {
   color: #0007ff;
@@ -113,7 +123,7 @@ button:hover::before {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -125,6 +135,7 @@ button:hover::before {
 /* Modal Content/Box */
 .modal-content {
   background-image: linear-gradient(to top left, #fdeedc, #f1a661);
+  z-index: 3;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -138,7 +149,7 @@ button:hover::before {
 }
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -185,6 +196,9 @@ footer {
   background-color: blue;
   z-index: 5;
 }
+footer > b {
+  color: white;
+}
 td > img {
   width: 5em;
   aspect-ratio: 1/1;
@@ -193,4 +207,15 @@ td > img {
 }
 p {
   margin-bottom: 0;
+}
+@media screen and (max-width: 992px) {
+  .fa {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: xx-large;
+  }
+  #name {
+    font-size: xx-large;
+  }
 }
