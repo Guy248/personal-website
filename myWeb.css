@@ -201,6 +201,7 @@ footer > b {
 }
 td > img {
   width: 5em;
+  max-width: 100%;
   aspect-ratio: 1/1;
   display: block;
   padding: 2px;
